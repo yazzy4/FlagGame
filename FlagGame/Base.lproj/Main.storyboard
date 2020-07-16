@@ -16,16 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-gw-dy8">
-                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <rect key="frame" x="107" y="238" width="200" height="100"/>
                                 <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Rh-HX-tPA"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-zh-Tbw">
-                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-zh-Tbw">
+                                <rect key="frame" x="107" y="368" width="200" height="100"/>
                                 <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocS-tk-Ief"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-bH-PHl">
-                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-bH-PHl">
+                                <rect key="frame" x="107" y="498" width="200" height="100"/>
                                 <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9x-CK-kzo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -33,7 +42,7 @@
                             <constraint firstItem="inR-zh-Tbw" firstAttribute="top" secondItem="CdP-gw-dy8" secondAttribute="bottom" constant="30" id="4eC-Dw-bqI"/>
                             <constraint firstItem="Vtv-bH-PHl" firstAttribute="centerX" secondItem="inR-zh-Tbw" secondAttribute="centerX" id="CSA-6p-1iB"/>
                             <constraint firstItem="Vtv-bH-PHl" firstAttribute="top" secondItem="inR-zh-Tbw" secondAttribute="bottom" constant="30" id="GRu-f0-yjF"/>
-                            <constraint firstItem="CdP-gw-dy8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="kCD-Ey-ked"/>
+                            <constraint firstItem="CdP-gw-dy8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="kCD-Ey-ked"/>
                             <constraint firstItem="CdP-gw-dy8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rDd-7y-pjx"/>
                             <constraint firstItem="inR-zh-Tbw" firstAttribute="centerX" secondItem="CdP-gw-dy8" secondAttribute="centerX" id="w4p-8y-hxV"/>
                         </constraints>
