@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScoreButtonPressed))
+        
         countries += ["estonia", "germany", "france", "ireland", "italy", "monoco", "nigeria", "poland", "russia", "spain", "uk", "us" ]
         
         button1.layer.borderWidth = 1
@@ -36,6 +38,13 @@ class ViewController: UIViewController {
         
         askQuestion()
     }
+    
+    @objc func showScoreButtonPressed(){
+        let ac = UIAlertController(title: "SCORE COUNT", message: "Your current score is \(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+        present(ac, animated: true)
+    }
+    
     
     func askQuestion(action: UIAlertAction! = nil){
         countries.shuffle()
@@ -68,13 +77,6 @@ class ViewController: UIViewController {
             score -= 1
         }
         
-
-//        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-//
-//        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-//
-//        present(ac, animated: true)
-        
         if score < 10 {
         let ac = UIAlertController(title: title, message: "Your current score is \(score)", preferredStyle: .alert)
             
@@ -92,11 +94,7 @@ class ViewController: UIViewController {
     
 }
             
-//        } else if score == 10  {
-//            let ac = UIAlertController(title: title, message: "Your score is \(score)! You won!", preferredStyle: .alert)
-//
-//            ac.addAction(UIAlertAction(title: "Game complete", style: .cancel, handler: askQuestion))
-//
+
             
         
     
